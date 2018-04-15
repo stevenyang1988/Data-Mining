@@ -18,8 +18,6 @@ data = pd.read_csv('C:\\Users\\steven\\Desktop\\data\\address_product_series.csv
 data1 = data.drop_duplicates("product_series")
 data2 = data1.set_index(['product_series'])
 # 读取maxcompute中的diagnose_report表
-odps = ODPS('LTAIkLO9entocXgc', 'mCr2aK02tf510aqwAoZRI0QjpTRdTA', 'Launch_DW',
-            endpoint='http://service.odps.aliyun.com/api')
 t = odps.get_table('diagnose_report')
 
 
